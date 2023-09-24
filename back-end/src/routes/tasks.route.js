@@ -1,7 +1,7 @@
 const express = require('express');
 
 const taskController = require('../controller/tasks.controller');
-const { validateTaskCreational, validateId } = require('../middlewares');
+const { validateTaskCreational, validateId, validateTaskToUpdate } = require('../middlewares');
 
 const tasksRoute = express.Router();
 
@@ -15,7 +15,7 @@ tasksRoute.get('/task', taskController.getByText);
 tasksRoute.post('/task', validateTaskCreational, taskController.post);
 
 // Requisição para atualizar uma tarefa existente
-tasksRoute.put('/task/:id', validateId, taskController.update);
+tasksRoute.put('/task/:id', validateId, validateTaskToUpdate, taskController.update);
 
 // Requisição para deletar uma tarefa
 tasksRoute.delete('/task/:id', validateId, taskController.remove);
