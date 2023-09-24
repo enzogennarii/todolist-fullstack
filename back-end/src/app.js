@@ -1,6 +1,6 @@
 const express = require('express');
 
-const tasksRoute = require('./routes/tasks.route');
+const { tasksRoute } = require('./routes');
 
 const app = express();
 
