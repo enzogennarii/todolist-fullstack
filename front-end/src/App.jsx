@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <h1>TodoList</h1>
     </div>
-  )
+  );
 }
 
 export default App;
