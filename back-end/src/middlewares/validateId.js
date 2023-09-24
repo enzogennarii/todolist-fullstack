@@ -15,4 +15,4 @@ const validateId = async (req, res, next) => {
   next();
 };
 
-export default validateId;
+module.exports = validateId;
