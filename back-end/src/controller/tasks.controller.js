@@ -1,5 +1,5 @@
 const mapStatusHTTP = require('../utils/mapStatusHTTP');
-const taskService = require('./tasks.service');
+const taskService = require('../service/tasks.service');
 
 const internalErrorMessage = { message: 'Ops, algo deu errado!' };
 
